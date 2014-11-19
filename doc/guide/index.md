@@ -10,7 +10,7 @@ html：
 
 javascript:
         
-    S.use('kg/number-zoom/1.0.1/index,kg/number-zoom/1.0.01index.css', function (S, NumberZoom) {
+    S.use('kg/number-zoom/1.0.2/index,kg/number-zoom/1.0.2/index.css', function (S, NumberZoom) {
         var numberZoom = new NumberZoom({$target:'.J_NumberZoom'});
     })
 

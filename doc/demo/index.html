@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>NumberZoom的demo</title>
-    <script src="http://g.tbcdn.cn/kissy/k/1.4.6/seed-min.js" charset="utf-8"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" charset="utf-8"></script>
 </head>
 <body>
 <h2>NumberZoom的demo</h2>
@@ -17,7 +17,7 @@
         S.config({
             packages:[
                 {
-                    name:"kg/number-zoom/1.0.0",
+                    name:"kg/number-zoom/1.0.2",
                     path:debugPath,
                     charset:"utf-8",
                     ignorePackageNameInUri:true
@@ -26,7 +26,7 @@
         });
     }
 
-    S.use('kg/number-zoom/1.0.0/index,kg/number-zoom/1.0.0/index.css', function (S, NumberZoom) {
+    S.use('kg/number-zoom/1.0.2/index,kg/number-zoom/1.0.2/index.css', function (S, NumberZoom) {
         var numberZoom = new NumberZoom({$target:'.J_NumberZoom'});
     })
 </script>
