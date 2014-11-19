@@ -1,1 +1,0 @@
-KISSY.config("modules",{"kg/number-zoom/1.0.2/index":{requires:["node","base","overlay"]}});
