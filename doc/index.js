@@ -49,8 +49,17 @@ var NumberZoom = Base.extend({
         popup.set('visible',true);
         popup.align($target,self.get('align') == "top" && ['tl', 'bl'] || ['bl', 'tl']);
     },
+    hide: function(){
+        var self = this;
+        var popup = self.get('popup');
+        popup && popup.set('visible',false);
+    },
     //获取弹出层的html结构
     _html : function(money){
+        //去掉逗号分隔符
+        money = money.replace(',','');
+        //去掉小数
+        money = money.split('.')[0];
         var unit = ["元", "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千"];
         var html = '<section class="number-zoom">';
         for (var i = money.length; i >= 0; i--) {
