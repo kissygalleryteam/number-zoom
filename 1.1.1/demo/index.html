@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>NumberZoom的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" charset="utf-8"></script>
+</head>
+<body>
+<h2>NumberZoom的demo</h2>
+<p>
+    <input type="text" class="J_NumberZoom" value="2342342342" />
+</p>
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var debugPath = "../build";
+        S.config({
+            packages:[
+                {
+                    name:"kg/number-zoom/1.1.1",
+                    path:debugPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('kg/number-zoom/1.1.1/index,kg/number-zoom/1.1.1/index.css', function (S, NumberZoom) {
+        var numberZoom = new NumberZoom({$target:'.J_NumberZoom'});
+    })
+</script>
+</body>
+</html>
+
