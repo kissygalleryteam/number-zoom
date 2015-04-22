@@ -1,5 +1,5 @@
 /*
-Wed Apr 22 2015 20:02:34 GMT+0800 (CST)
+Wed Apr 22 2015 20:19:55 GMT+0800 (CST)
 combined files by KMD:
 
 index.js
@@ -105,6 +105,7 @@ var NumberZoom = Base.extend({
     },
     _dealPrice : function(money){
         var ling;
+        var fu = money < 0 ? -1 : 1;
         var self = this;
         var $target = self.get('$target');
         //去掉逗号分隔符
@@ -114,7 +115,7 @@ var NumberZoom = Base.extend({
             money = parseFloat(Number(money)).toFixed(2);
         }
         //写入target
-        $target.val(self._addCommas(money));
+        $target.val(self._addCommas(money * fu));
         
         return money.split('.');
     },
@@ -126,7 +127,8 @@ var NumberZoom = Base.extend({
         if(!num){
             return '';
         }
-        num += '';
+        var fu = num < 0 ? '-' : '';
+        num = Math.abs(num) + '';
         var arr = num.split('.');
         var before = arr[0],
         after = arr.length > 1 ? '.' + arr[1] : '';
@@ -134,7 +136,7 @@ var NumberZoom = Base.extend({
         while (rgx.test(before)) {
             before = before.replace(rgx, '$1' + ',' + '$2');
         }
-        return before + after;
+        return fu + before + after;
     }
 },{
     ATTRS:{
