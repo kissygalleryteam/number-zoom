@@ -6,7 +6,7 @@ var src = ".",
     dest = "./build";
 
 //包配置
-var pkg = "kg/number-zoom/1.1.0";
+var pkg = "kg/number-zoom/1.1.1";
 
 //编译模板
 gulp.task('xtpl', function() {

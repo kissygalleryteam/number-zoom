@@ -5,7 +5,7 @@ combined files by KMD:
 index.js
 */
 
-KISSY.add('kg/number-zoom/1.1.0/index',["node","base","overlay"],function(S ,require, exports, module) {
+KISSY.add('kg/number-zoom/1.1.1/index',["node","base","overlay"],function(S ,require, exports, module) {
 //数字放大器，同时会显示中文单位
 // by 剑平（明河）
 var $ = require('node').all;
